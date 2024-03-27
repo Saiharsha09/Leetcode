@@ -1,0 +1,17 @@
+def min_curr(n):
+    curr_arr=[2000,500,200,100,50,10,5,1]
+    curr_cnt={}
+    cnt=0
+    tot_cnt=0
+    for curr in curr_arr:
+        cnt=n//curr
+        tot_cnt+=1
+        if cnt>0:
+            curr_cnt[curr]=cnt
+        n=n%curr
+        if n==0:
+            break
+    print("\n Min cur cnt = ",tot_cnt)
+    print(curr_cnt)
+min_curr(int(input("Enter n: ")))
+
